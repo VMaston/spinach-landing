@@ -27,20 +27,20 @@ header {
     align-items: center;
     border-bottom: 1px solid gray;
     box-shadow: 0 7px 7px -7px gray;
-    margin-bottom: 2em;
+    margin-bottom: 32px;
 }
 
 .logo {
     height: 50%;
     width: auto;
-    padding: 1em;
+    padding: 16px;
 }
 
 /* === MAIN BODY === */
 
 .main {
     display: flex;
-    padding: 2em;
+    padding: 32px;
     flex-direction: column;
     flex-grow: 1;
     max-width: 1200px;
@@ -51,19 +51,28 @@ header {
 
 .first {
     display: flex;
+    flex-direction: column;
+
     height: calc(100vh - var(--header-height));
     padding-bottom: var(--header-height); /* Accurately Centres Content */
+
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .introducing {
     font-size: 4em;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
 }
 
 .dot {
     color: var(--accent1);
+    font-size: 2.5em;
+    margin-left: -15px;
 }
 
 .contact {
