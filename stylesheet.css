@@ -1,0 +1,26 @@
+:root {
+    --accent1: #ffdf01;
+    --accent2: #6C58ED;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 7px 7px -7px gray;
+}
+
+.logo {
+    height: 50%;
+    width: auto;
+    padding: 1em;
+}
