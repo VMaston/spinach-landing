@@ -24,8 +24,8 @@ header {
     left: 0;
     right: 0;
     height: var(--header-height);
-    justify-content: center;
     align-items: center;
+    padding-left: 3%;
     border-bottom: 1px solid gray;
     box-shadow: 0 7px 7px -7px gray;
     margin-bottom: 32px;
