@@ -112,3 +112,10 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+/* === FOOTER === */
+
+footer {
+    height: 30%;
+    background-color: #e9e9e9;
+}
