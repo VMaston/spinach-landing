@@ -38,6 +38,33 @@ header {
     padding: 16px;
 }
 
+/* === LANDING PAGE === */
+
+    .first {
+        display: flex;
+        flex-direction: row;
+    
+        height: calc(100vh - var(--header-height));
+        padding-bottom: var(--header-height); /* Accurately Centres Content */
+    
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        background-color: antiquewhite;
+    }
+    
+    .introducing {
+        font-size: 3.5em;
+        font-weight: lighter;
+        width: 40%;
+    }
+    
+    .dot {
+        color: var(--accent1);
+        font-size: 2.5em;
+    }
+
 /* === MAIN BODY === */
 
 .main {
@@ -47,31 +74,6 @@ header {
     flex-grow: 1;
     max-width: 1200px;
     margin: auto;
-}
-
-    /* === LANDING PAGE === */
-
-.first {
-    display: flex;
-    flex-direction: row;
-
-    height: calc(100vh - var(--header-height));
-    padding-bottom: var(--header-height); /* Accurately Centres Content */
-
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.introducing {
-    font-size: 3.5em;
-    font-weight: lighter;
-    width: 60%;
-}
-
-.dot {
-    color: var(--accent1);
-    font-size: 2.5em;
 }
 
     /* === ABOUT === */
