@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* === HEADER === */
@@ -60,13 +61,10 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .introducing {
     font-size: 4em;
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 1em;
 }
 
@@ -75,6 +73,40 @@ header {
     font-size: 2.5em;
     margin-left: -15px;
 }
+
+    /* === ABOUT === */
+    
+.about-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10%;
+}
+
+.about-text-container {
+    text-align: left;
+    padding-left: 10%;
+    font-size: 3em;
+    width: 100%;
+}
+
+.right {
+    direction: rtl;
+    padding-left: 0;
+    padding-right: 10%;
+}
+
+.about-undertext {
+    font-size: 0.3em;
+}
+
+.about-img {
+    width: 50%;
+}
+
+
+    /* === CONTACT === */
 
 .contact {
     display: flex;
