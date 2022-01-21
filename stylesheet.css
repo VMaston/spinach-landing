@@ -71,7 +71,6 @@ header {
 .dot {
     color: var(--accent1);
     font-size: 2.5em;
-    margin-left: -15px;
 }
 
     /* === ABOUT === */
