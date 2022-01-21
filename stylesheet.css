@@ -51,7 +51,8 @@ header {
 
 .first {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
+    padding-bottom: var(--header-height); /* Accurately Centres Content */
     justify-content: center;
     align-items: center;
 }
