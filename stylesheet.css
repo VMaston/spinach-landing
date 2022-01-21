@@ -1,6 +1,10 @@
+/* === GLOBAL SETTINGS === */
+
 :root {
     --accent1: #ffdf01;
     --accent2: #6C58ED;
+
+    --header-height: 5em;
 }
 
 body {
@@ -10,17 +14,58 @@ body {
     font-size: 16px;
 }
 
+/* === HEADER === */
+
 header {
     display: flex;
-    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid gray;
     box-shadow: 0 7px 7px -7px gray;
+    margin-bottom: 2em;
 }
 
 .logo {
     height: 50%;
     width: auto;
     padding: 1em;
+}
+
+/* === MAIN BODY === */
+
+.main {
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: auto;
+}
+
+    /* === LANDING PAGE === */
+
+.first {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.introducing {
+    font-size: 4em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.dot {
+    color: var(--accent1);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
 }
