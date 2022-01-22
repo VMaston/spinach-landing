@@ -24,6 +24,8 @@ header {
     left: 0;
     right: 0;
     height: var(--header-height);
+    z-index: 2;
+    /* Header fix if we want to use scrollmagic animations */
     align-items: center;
     padding-left: 3%;
     border-bottom: 1px solid gray;
@@ -40,30 +42,31 @@ header {
 
 /* === LANDING PAGE === */
 
-    .first {
-        display: flex;
-        flex-direction: row;
-    
-        height: calc(100vh - var(--header-height));
-        padding-bottom: var(--header-height); /* Accurately Centres Content */
-    
-        align-items: center;
+.first {
+    display: flex;
+    flex-direction: row;
 
-        background-image: url(img/triangle-lights.jpg);
-    }
-    
-    .introducing {
-        color: whitesmoke;
-        font-size: 4.5em;
-        padding-left: 100px;
-        font-weight: lighter;
-        width: 40%;
-    }
-    
-    .dot {
-        color: var(--accent1);
-        font-size: 2.5em;
-    }
+    height: calc(100vh - var(--header-height));
+    padding-bottom: var(--header-height);
+    /* Accurately Centres Content */
+
+    align-items: center;
+
+    background-image: url(img/triangle-lights.jpg);
+}
+
+.introducing {
+    color: whitesmoke;
+    font-size: 4.5em;
+    padding-left: 100px;
+    font-weight: lighter;
+    width: 40%;
+}
+
+.dot {
+    color: var(--accent1);
+    font-size: 2.5em;
+}
 
 /* === MAIN BODY === */
 
@@ -72,45 +75,88 @@ header {
     padding: 32px;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     margin-top: 5%;
 }
 
-    /* === ABOUT === */
-    
+/* === ABOUT === */
+
 .about-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     margin-bottom: 10%;
+
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    transform: translateX(-40px);
+
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.left {
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+}
+
+.about-block1 {
+    opacity: 0;
+}
+
+.about-block2 {
+    opacity: 0;
+}
+
+.about-block3 {
+    opacity: 0;
+}
+
+
+.reveal {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
 }
 
 .about-text-container {
     text-align: left;
-    padding-left: 10%;
+    font-size: 5em;
+    padding-left: 0;
+    padding-right: 10%;
     font-size: 3em;
     width: 100%;
 }
 
-.right {
-    direction: rtl;
-    text-align: right;
-    padding-left: 0;
-    padding-right: 10%;
+.about-text-container.left-aligned {
+    padding-right: 0;
+    padding-left: 10%;
 }
 
 .about-undertext {
-    font-size: 0.3em;
+    font-size: 0.4em;
+    font-weight: lighter;
+    line-height: 1.4;
 }
 
 .about-img {
-    width: 70%;
+    max-width: 30%;
 }
 
 
-    /* === CONTACT === */
+/* === CONTACT === */
 
 .contact {
     display: flex;
