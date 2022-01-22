@@ -15,8 +15,8 @@ document.querySelectorAll('.about-block').forEach(elem => {
 });
 
 new ScrollMagic.Scene({
-    triggerElement: '.main',
-    triggerHook: 0.15,
+    triggerElement: '.contact',
+    triggerHook: 0.05,
     offset: 0
 })
     .setClassToggle('.logo', "dark")

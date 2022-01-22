@@ -20,7 +20,7 @@ body {
 /* === HEADER === */
 
 header {
-    display: flex;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,13 +47,12 @@ header {
 
 .first {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    box-sizing: border-box;
 
-    height: calc(100vh - var(--header-height));
-    padding-bottom: var(--header-height);
+    height: 100vh;
     /* Accurately Centres Content */
-
-    align-items: center;
+    justify-content: end;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     background-image: url(img/triangle-lights.jpg);
@@ -65,6 +64,7 @@ header {
     padding-left: 100px;
     font-weight: lighter;
     width: 40%;
+    margin-bottom: 20%;
 }
 
 .dot {
@@ -75,10 +75,33 @@ header {
     width: 15px;
 }
 
+/* === CONTACT === */
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.contact {
+    background-color: #ffe633;
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    justify-content: center;
+    flex-direction: row;
+}
+
+.contact>label {
+    padding: 1%;
+}
+
 /* === MAIN BODY === */
 
 .main {
     display: flex;
+    align-items: center;
     padding: 32px;
     flex-direction: column;
     flex-grow: 1;
@@ -193,14 +216,6 @@ header {
 
 .about-underimg.middle {
     align-self: center;
-}
-
-
-/* === CONTACT === */
-
-.contact {
-    display: flex;
-    flex-direction: row;
 }
 
 /* === FOOTER === */
