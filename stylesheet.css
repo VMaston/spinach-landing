@@ -24,6 +24,8 @@ header {
     left: 0;
     right: 0;
     height: var(--header-height);
+    z-index: 2;
+    /* Header fix if we want to use scrollmagic animations */
     align-items: center;
     padding-left: 3%;
     border-bottom: 1px solid gray;
@@ -73,7 +75,7 @@ header {
     padding: 32px;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     margin-top: 5%;
 }
@@ -83,20 +85,19 @@ header {
 .about-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     margin-bottom: 10%;
 
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9);
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    transform: translateX(-40px);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 .about-block1 {
@@ -121,34 +122,27 @@ header {
     transform: none;
 }
 
-.about-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 10%;
-}
-
 .about-text-container {
     text-align: left;
+    font-size: 5em;
     padding-left: 10%;
     font-size: 3em;
     width: 100%;
 }
 
 .right {
-    direction: rtl;
-    text-align: right;
     padding-left: 0;
     padding-right: 10%;
 }
 
 .about-undertext {
-    font-size: 0.3em;
+    font-size: 0.4em;
+    font-weight: lighter;
+    line-height: 1.4;
 }
 
 .about-img {
-    width: 70%;
+    width: 50%;
 }
 
 
