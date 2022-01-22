@@ -13,3 +13,12 @@ document.querySelectorAll('.about-block').forEach(elem => {
         .addTo(controller)
 
 });
+
+new ScrollMagic.Scene({
+    triggerElement: '.main',
+    triggerHook: 0.15,
+    offset: 0
+})
+    .setClassToggle('.logo', "dark")
+    //.addIndicators()
+    .addTo(controller)
