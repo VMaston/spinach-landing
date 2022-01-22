@@ -40,30 +40,31 @@ header {
 
 /* === LANDING PAGE === */
 
-    .first {
-        display: flex;
-        flex-direction: row;
-    
-        height: calc(100vh - var(--header-height));
-        padding-bottom: var(--header-height); /* Accurately Centres Content */
-    
-        align-items: center;
+.first {
+    display: flex;
+    flex-direction: row;
 
-        background-image: url(img/triangle-lights.jpg);
-    }
-    
-    .introducing {
-        color: whitesmoke;
-        font-size: 4.5em;
-        padding-left: 100px;
-        font-weight: lighter;
-        width: 40%;
-    }
-    
-    .dot {
-        color: var(--accent1);
-        font-size: 2.5em;
-    }
+    height: calc(100vh - var(--header-height));
+    padding-bottom: var(--header-height);
+    /* Accurately Centres Content */
+
+    align-items: center;
+
+    background-image: url(img/triangle-lights.jpg);
+}
+
+.introducing {
+    color: whitesmoke;
+    font-size: 4.5em;
+    padding-left: 100px;
+    font-weight: lighter;
+    width: 40%;
+}
+
+.dot {
+    color: var(--accent1);
+    font-size: 2.5em;
+}
 
 /* === MAIN BODY === */
 
@@ -77,8 +78,49 @@ header {
     margin-top: 5%;
 }
 
-    /* === ABOUT === */
-    
+/* === ABOUT === */
+
+.about-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10%;
+
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.about-block1 {
+    opacity: 0;
+}
+
+.about-block2 {
+    opacity: 0;
+}
+
+.about-block3 {
+    opacity: 0;
+}
+
+
+.reveal {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
 .about-block {
     display: flex;
     flex-direction: row;
@@ -110,7 +152,7 @@ header {
 }
 
 
-    /* === CONTACT === */
+/* === CONTACT === */
 
 .contact {
     display: flex;
