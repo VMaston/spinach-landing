@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* === GLOBAL SETTINGS === */
 
 :root {
@@ -12,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* === HEADER === */
@@ -28,16 +30,17 @@ header {
     /* Header fix if we want to use scrollmagic animations */
     align-items: center;
     padding-left: 3%;
-    border-bottom: 1px solid gray;
-    box-shadow: 0 7px 7px -7px gray;
     margin-bottom: 32px;
-    background-color: #ffffff;
 }
 
 .logo {
     height: 50%;
     width: auto;
     padding: 16px;
+}
+
+.dark {
+    content: url("img/logo.png");
 }
 
 /* === LANDING PAGE === */
@@ -51,6 +54,7 @@ header {
     /* Accurately Centres Content */
 
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     background-image: url(img/triangle-lights.jpg);
 }
@@ -64,8 +68,11 @@ header {
 }
 
 .dot {
-    color: var(--accent1);
-    font-size: 2.5em;
+    display: inline-block;
+    margin-right: 15px;
+    background-color: var(--accent1);
+    height: 15px;
+    width: 15px;
 }
 
 /* === MAIN BODY === */
@@ -86,7 +93,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 10%;
+    margin-bottom: 18%;
 
     -webkit-transform: translateX(-40px);
     -moz-transform: translateX(-40px);
@@ -102,11 +109,24 @@ header {
 }
 
 .left {
+
+    flex-direction: row;
+    justify-content: center;
+
     -webkit-transform: translateX(40px);
     -moz-transform: translateX(40px);
     -ms-transform: translateX(40px);
     -o-transform: translateX(40px);
     transform: translateX(40px);
+}
+
+.middle {
+
+    -webkit-transform: translateY(40px);
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+    transform: translateY(40px);
 }
 
 .about-block1 {
@@ -132,15 +152,24 @@ header {
 }
 
 .about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%;
     text-align: left;
     font-size: 5em;
-    padding-left: 0;
     padding-right: 10%;
     font-size: 3em;
     width: 100%;
 }
 
-.about-text-container.left-aligned {
+.container-middle {
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.container-left {
     padding-right: 0;
     padding-left: 10%;
 }
@@ -149,10 +178,21 @@ header {
     font-size: 0.4em;
     font-weight: lighter;
     line-height: 1.4;
+    margin-bottom: 4%;
 }
 
 .about-img {
     max-width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.about-underimg {
+    max-width: 90%;
+    align-self: center;
+}
+
+.about-underimg.middle {
+    align-self: center;
 }
 
 
