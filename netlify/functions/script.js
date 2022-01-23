@@ -3,7 +3,7 @@ const axios = require('axios');
 exports.handler = async (event, context) => {
 
     axios({
-        url: `https://expensemate-staging.netlify.app/api/companies?name=${companyName}`,
+        url: `https://expensemate-staging.netlify.app/api/companies?name=spinach`,
         method: 'get'
     })
         .then(function (response) {
