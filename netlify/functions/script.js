@@ -1,6 +1,6 @@
 exports.handler = async function(event, context) {
 
-    var HttpClient = function() {
+    var HttpClient = async function() {
         this.get = function(aUrl, aCallback) {
             var anHttpRequest = new XMLHttpRequest();
             anHttpRequest.onreadystatechange = function() { 
@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
     }
 
     var client = new HttpClient();
-client.get(`https://expensemate-staging.netlify.app/api/companies?name=${companyName}`, function(response) {
+client.get(`https://expensemate-staging.netlify.app/api/companies?name=${companyName}`, async function(response) {
     let data = await response.json()
     return data
 });
