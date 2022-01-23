@@ -1,17 +1,20 @@
 exports.handler = async function () {
 
-    var companyName = document.getElementById(cname);
+    var body;
 
     axios({
         url: `https://expensemate-staging.netlify.app/api/companies?name=${companyName}`,
         method: 'get'
     })
         .then(function (response) {
-            console.log(response);
-            return response;
+            body = response;
         })
         .catch(function (error) {
-            console.log(error);
-            return error;
+            body = error;
         });
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify(body)
+        }
 }
