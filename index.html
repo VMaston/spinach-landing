@@ -13,10 +13,8 @@
 <script>
     function mySubmit() {
         const response = fetch('functions/script.js').then(
-            response => response.json()
+            console.log(response)
         )
-
-        console.log(JSON.stringify(response))
     }
 </script>
 
