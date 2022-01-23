@@ -12,12 +12,12 @@
 <script>
     async function mySubmit() {
 
-        var companyResult;
+        let companyResult;
 
         var companyName = document.getElementById("cname").value;
         const response = await fetch(`/.netlify/functions/script?url=${companyName}`)
             .then(response => response.json())
-            .then(data => data.items[0] = companyResult)
+            .then(data => companyResult = data.items[0])
 
         console.log(companyResult.title)
         console.log(companyResult.company_number)
