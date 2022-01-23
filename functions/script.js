@@ -1,9 +1,9 @@
-exports.handler = async function mySubmit() {
+exports.handler = async function () {
 
     var companyName = document.getElementById(cname);
 
     axios({
-        url: `https://expensemate-staging.netlify.app/api/companies?name=spinach`,
+        url: `https://expensemate-staging.netlify.app/api/companies?name=${companyName}`,
         method: 'get'
     })
         .then(function (response) {
