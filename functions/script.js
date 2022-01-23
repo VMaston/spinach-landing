@@ -1,4 +1,4 @@
-function mySubmit() {
+exports.handler = async function mySubmit() {
 
     var companyName = document.getElementById(cname);
 
@@ -8,8 +8,10 @@ function mySubmit() {
     })
         .then(function (response) {
             console.log(response);
+            return response;
         })
         .catch(function (error) {
             console.log(error);
+            return error;
         });
 }
