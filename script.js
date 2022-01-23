@@ -19,6 +19,15 @@ new ScrollMagic.Scene({
     triggerHook: 0.05,
     offset: 0
 })
+    .setClassToggle('.logo', "black")
+    //.addIndicators()
+    .addTo(controller)
+
+new ScrollMagic.Scene({
+    triggerElement: '.main',
+    triggerHook: 0.05,
+    offset: -80
+})
     .setClassToggle('.logo', "dark")
     //.addIndicators()
     .addTo(controller)

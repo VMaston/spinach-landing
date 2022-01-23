@@ -6,7 +6,11 @@
     --accent1: #ffdf01;
     --accent2: #6C58ED;
 
-    --header-height: 5em;
+    --header-height: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,18 +33,22 @@ header {
     z-index: 2;
     /* Header fix if we want to use scrollmagic animations */
     align-items: center;
-    padding-left: 3%;
+    padding-left: 3rem;
     margin-bottom: 32px;
 }
 
 .logo {
     height: 50%;
     width: auto;
-    padding: 16px;
+    padding: 1rem;
+}
+
+.black {
+    content: url("img/logo/logo-black.png")
 }
 
 .dark {
-    content: url("img/logo.png");
+    content: url("img/logo/logo.png");
 }
 
 /* === LANDING PAGE === */
@@ -59,12 +67,14 @@ header {
 }
 
 .introducing {
+    max-height: 8em;
+    height: 100%;
+    margin-top: var(--header-height);
     color: whitesmoke;
     font-size: 4.5em;
     padding-left: 100px;
     font-weight: lighter;
     width: 40%;
-    margin-bottom: 20%;
 }
 
 .dot {
@@ -84,17 +94,41 @@ header {
     justify-content: end;
 }
 
+.book {
+    font-size: 1.5em;
+    font-weight: lighter;
+    max-width: 50em;
+    width: 100%;
+    white-space: nowrap;
+}
+
 .contact {
-    background-color: #ffe633;
+    background-color: #ffe626;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     height: var(--header-height);
-    justify-content: center;
+    padding-left: 18em;
+    padding-right: 18em;
     flex-direction: row;
 }
 
 .contact>label {
     padding: 1%;
+    margin-left: 3em;
+    white-space: nowrap;
+    font-weight: 200;
+}
+
+.contact>input {
+    padding: 0.3em;
+}
+
+.submit-button {
+    margin-left: 1%;
+    padding: 0.2em 1em 0.2em 1em;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* === MAIN BODY === */
