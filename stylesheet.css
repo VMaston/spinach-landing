@@ -31,6 +31,7 @@ header {
     right: 0;
     height: var(--header-height);
     z-index: 2;
+    pointer-events: none;
     /* Header fix if we want to use scrollmagic animations */
     align-items: center;
     padding-left: 3rem;
