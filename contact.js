@@ -13,7 +13,7 @@ function autocomplete() {
         for (i = 0; i < arr.length; i++) {
             listItems = document.createElement("DIV");
             listItems.innerHTML = arr[i];
-            listItems.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            listItems.innerHTML += "<input type='hidden' value='" + arr[i].title + "'>";
                 listItems.addEventListener("click", function() {
                 search.value = this.getElementsByTagName("input")[0].value;
             });
