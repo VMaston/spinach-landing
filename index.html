@@ -14,8 +14,8 @@
         var companyName = document.getElementById("cname").value;
         const response = await fetch(`/.netlify/functions/script?url=${companyName}`).then(
             response => {
-                console.log(response.body)
-                var obj = JSON.parse(response.body)
+                console.log(response.response)
+                var obj = JSON.parse(response.response)
                 console.log(obj)
             }
         )
