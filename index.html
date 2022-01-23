@@ -13,10 +13,13 @@
     async function mySubmit() {
         var companyName = document.getElementById("cname").value;
         const response = await fetch(`/.netlify/functions/script?url=${companyName}`).then(
-            response => response
+            response => {
+                var obj = JSON.parse(response)
+                console.log(obj)
+            }
         )
 
-        console.log(response)
+        console.log(response.body)
     }
 </script>
 
