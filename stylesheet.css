@@ -56,12 +56,12 @@ header {
 
 .first {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
 
     height: 100vh;
     /* Accurately Centres Content */
-    justify-content: end;
+    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     background-image: url(img/triangle-lights.jpg);
@@ -75,7 +75,7 @@ header {
     font-size: 4.5em;
     padding-left: 100px;
     font-weight: lighter;
-    width: 40%;
+    width: 10em;
 }
 
 .dot {
@@ -114,14 +114,17 @@ header {
     flex-direction: row;
 }
 
-.contact>label {
+.label-input {
+    width: 100%;
+}
+
+.label-input>label {
     padding: 1%;
-    margin-left: 3em;
     white-space: nowrap;
     font-weight: 200;
 }
 
-.contact>input {
+.label-input>input {
     padding: 0.3em;
 }
 
