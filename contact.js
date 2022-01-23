@@ -2,7 +2,7 @@ async function autocomplete() {
 
     var search = document.getElementById("cname");
 
-    search.addEventListener("input", function() {
+    search.addEventListener("input", async function() {
         var arr = await mySubmit();
         var container, listItems, i;
         container = document.createElement("DIV");
