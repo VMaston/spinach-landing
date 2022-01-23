@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-export async function handler(event, context) {
+exports.handler = async (event, context) => {
 
     axios({
         url: `https://expensemate-staging.netlify.app/api/companies?name=${companyName}`,
