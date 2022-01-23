@@ -7,23 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <script src="contact.js"></script>
 </head>
-
-<script>
-    async function mySubmit() {
-
-        let companyResult;
-
-        var companyName = document.getElementById("cname").value;
-        const response = await fetch(`/.netlify/functions/script?url=${companyName}`)
-            .then(response => response.json())
-            .then(data => companyResult = data.items[0])
-
-        console.log(companyResult.title)
-        console.log(companyResult.company_number)
-        console.log(companyResult.address_snippet)
-    }
-</script>
 
 <body>
     <header><img class="logo" src="img/logo/logo-white.png" /></header>
@@ -90,5 +75,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="scrollmagic.js"></script>
+<script>
+    autocomplete(mySubmit());
+</script>
 
 </html>
