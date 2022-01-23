@@ -14,9 +14,7 @@
         var companyName = document.getElementById("cname").value;
         const response = await fetch(`/.netlify/functions/script?url=${companyName}`)
             .then(response => response.json())
-            .then(data => console.log(data))
-
-        console.log(data)
+            .then(data => console.log(data.items[0].company_number))
     }
 </script>
 
