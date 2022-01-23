@@ -1,4 +1,4 @@
-import * as axios from 'https://unpkg.com/axios/dist/axios.min.js';
+const axios = require('axios')
 
 export async function handler(event, context) {
 
@@ -16,5 +16,5 @@ export async function handler(event, context) {
         let response = await fetch(`https://expensemate-staging.netlify.app/api/companies?name=${companyName}`);
         let data = await response.json();
         return data;
-        
+
 }
