@@ -11,7 +11,8 @@
 
 <script>
     async function mySubmit() {
-        const response = await fetch(`/.netlify/functions/script?url=${document.getElementById(cname)}`).then(
+        companyName = document.getElementById(cname);
+        const response = await fetch(`/.netlify/functions/script?url=${companyName}`).then(
             response => response
         )
 
