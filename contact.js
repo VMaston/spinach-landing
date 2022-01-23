@@ -33,5 +33,6 @@ async function mySubmit() {
         .then(response => response.json())
         .then(data => companyResult = data.items)
 
-        return companyResult
+        console.log("AA: " + companyResult);
+        return companyResult;
 }
