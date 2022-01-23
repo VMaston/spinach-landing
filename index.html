@@ -13,8 +13,10 @@
 <script>
     async function mySubmit() {
         const response = await fetch('functions/script.js').then(
-            console.log(response)
+            response => response
         )
+
+        console.log(response)
     }
 </script>
 
