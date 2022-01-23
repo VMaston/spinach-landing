@@ -6,7 +6,7 @@ function autocomplete() {
 
   search.addEventListener("input", function () {
     clearTimeout(timer);
-    timer = setTimeout(find(), timelimit);
+    timer = setTimeout(find, timelimit);
 
     async function find() {
       if (search.value.length > 2) {
