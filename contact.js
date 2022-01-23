@@ -1,9 +1,9 @@
-function autocomplete() {
+async function autocomplete() {
 
     var search = document.getElementById("cname");
 
     search.addEventListener("input", function() {
-        var arr = mySubmit();
+        var arr = await mySubmit();
         var container, listItems, i;
         container = document.createElement("DIV");
         container.setAttribute("id", this.id + "autocomplete-list");
