@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require('axios');
 
 export async function handler(event, context) {
 
