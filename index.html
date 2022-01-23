@@ -11,9 +11,9 @@
 </head>
 
 <script>
-    function mySubmit() {
-        const response = fetch('functions/script.js').then(
-            await console.log(response)
+    async function mySubmit() {
+        const response = await fetch('functions/script.js').then(
+            console.log(response)
         )
     }
 </script>
