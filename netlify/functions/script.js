@@ -2,7 +2,7 @@ const axios = require('axios');
 
 exports.handler = async (event, context) => {
 
-    const url = `https://expensemate-staging.netlify.app/api/companies?name=spinach`;
+    const url = event.queryStringParameters.url;
     console.log("URL: ", url)
 
     return axios({
