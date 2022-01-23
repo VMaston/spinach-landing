@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -16,18 +18,20 @@
         <div class="introducing">Expand your business operations <span style="font-weight: bold;">online</span>
             <span class="dot" style="margin-left: 15px;"></span>
         </div>
-        <div class="contact-container">
-            <form class="contact" action="">
-                <span class="book">Book a consultation with us:</span>
-                <label for="email">Contact Email:</label>
-                <input type="text" id="email" name="email" style="width: 80%;">
-                <label for="cname">Company Name:</label>
-                <input type="text" id="company" name="company" style="width: 60%">
-                <input class="submit-button" type="submit" value="Submit">
-            </form>
-        </div>
     </div>
 
+    <div class="contact-container">
+        <form id="contact" class="contact" onsubmit="mySubmit(); return false;">
+            <span class="book">Book a consultation with us:</span>
+            <div class="label-input"><label for="email">Contact Email:</label>
+                <input type="text" id="email" name="email" style="width: 80%;" required>
+            </div>
+            <div class="label-input"><label for="cname">Company Name:</label>
+                <input type="text" id="cname" name="company" style="width: 80%" required>
+                <input class="submit-button" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
     <div class="main">
 
         <div id="trigger1" class="about-block about-block1">
@@ -71,6 +75,6 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script src="script.js"></script>
+<script src="scrollmagic.js"></script>
 
 </html>
