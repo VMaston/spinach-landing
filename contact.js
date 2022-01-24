@@ -61,6 +61,11 @@ async function mySubmit() {
   var email = document.getElementById("email").value;
   var companyName = document.getElementById("cname").value;
   var companyDetails = await getCompany();
+  if (companyDetails[0].title == companyName) {
+    companyDetails = companyDetails[0];
+  } else {
+    companyDetails = "No Match";
+  }
 
   let jsonReturn = {
     email: email,
