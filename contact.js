@@ -62,12 +62,7 @@ async function mySubmit() {
   var companyName = document.getElementById("cname").value;
   var companyDetails = await getCompany();
 
-  compare1 = companyDetails[0].title.replace(/\s+/g, "");
-  compare2 = companyName.replace(/\s+/g, "").toUpperCase();
-
-  console.log(compare1);
-  console.log(compare2);
-  if (compare1 == compare2) {
+  if (companyDetails[0].title == companyName.toUpperCase()) {
     companyDetails = companyDetails[0];
   } else {
     companyDetails = "No Match";
