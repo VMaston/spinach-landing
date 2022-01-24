@@ -68,5 +68,5 @@ async function mySubmit() {
     company: companyDetails,
   };
 
-  return jsonReturn;
+  console.log(jsonReturn);
 }
