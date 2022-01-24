@@ -13,14 +13,14 @@ async function autocomplete() {
     var arr = await mySubmit();
     var container, listItems, i;
     container = document.createElement("DIV");
-    container.setAttribute("id", search.id + "autocomplete-list");
     container.setAttribute("class", "autocomplete-items");
     search.parentNode.appendChild(container);
 
     for (i = 0; i < arr.length; i++) {
       listItems = document.createElement("DIV");
       listItems.innerHTML = arr[i].title;
-      listItems.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+      listItems.innerHTML +=
+        "<input type='hidden' value='" + arr[i].title + "'>";
       listItems.addEventListener("click", function () {
         search.value = this.getElementsByTagName("input")[0].value;
       });
