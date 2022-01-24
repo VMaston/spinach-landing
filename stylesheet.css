@@ -190,11 +190,11 @@ header {
     opacity: 0;
 }
 
-.right-to-left {
+.left-to-right {
     transform: translateX(-40px);
 }
 
-.left-to-right {
+.right-to-left {
     transform: translateX(40px);
 }
 
@@ -309,6 +309,10 @@ footer {
 
     .label-input>input {
         margin-bottom: 1em;
+    }
+
+    .right-to-left {
+        margin-right: 40px;
     }
 }
 
