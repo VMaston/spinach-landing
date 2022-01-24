@@ -1,4 +1,4 @@
-import("node-fetch");
+import fetch from "node-fetch";
 
 exports.handler = async (event, context) => {
   const url = `https://expensemate-staging.netlify.app/api/companies?name=${event.queryStringParameters.url}`;
