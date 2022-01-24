@@ -19,7 +19,7 @@
     </div>
 
     <div id="book" class="contact-container">
-        <form id="contact" class="contact" onsubmit="mySubmit();">
+        <form id="contact" class="contact" onsubmit="new Promise(resolve => mySubmit()).then(reset()); return false;">
 
             <span class="book">Book a consultation with us:</span>
 

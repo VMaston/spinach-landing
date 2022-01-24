@@ -73,5 +73,7 @@ async function mySubmit() {
     company: companyDetails,
   };
 
+  document.getElementById("contact").reset();
+
   console.log(jsonReturn);
 }
