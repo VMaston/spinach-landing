@@ -161,7 +161,7 @@ header {
 }
 
 .submit-button {
-    margin-left: 1%;
+    margin-top: 1.5em;
     padding: 0.2em 1em 0.2em 1em;
     display: table-cell;
     vertical-align: middle;

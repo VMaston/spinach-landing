@@ -1,15 +1,16 @@
 var search = document.getElementById("cname");
 var timer = 0;
 
-search.addEventListener("keyup", function () {
+search.addEventListener("keyup", () => {
   clearTimeout(timer);
-  timer = setTimeout(function () {
+  timer = setTimeout(() => {
     autocomplete();
   }, 400);
 });
 
 async function autocomplete() {
   if (search.value.length > 2) {
+    closeAllLists();
     var arr = await mySubmit();
     var container, listItems, i;
     container = document.createElement("DIV");
@@ -23,11 +24,27 @@ async function autocomplete() {
         "<input type='hidden' value='" + arr[i].title + "'>";
       listItems.addEventListener("click", function () {
         search.value = this.getElementsByTagName("input")[0].value;
+        closeAllLists();
       });
       container.appendChild(listItems);
     }
   }
 }
+
+function closeAllLists() {
+  var x = document.getElementsByClassName("autocomplete-items");
+  for (var i = 0; i < x.length; i++) {
+    x[i].parentNode.removeChild(x[i]);
+  }
+}
+
+document.addEventListener("click", () => {
+  closeAllLists();
+});
+
+search.addEventListener("click", () => {
+  autocomplete();
+});
 
 async function mySubmit() {
   let companyResult;
