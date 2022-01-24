@@ -13,7 +13,7 @@ async function autocomplete() {
     var arr = await mySubmit();
     var container, listItems, i;
     container = document.createElement("DIV");
-    container.setAttribute("id", this.id + "autocomplete-list");
+    container.setAttribute("id", search.id + "autocomplete-list");
     container.setAttribute("class", "autocomplete-items");
     search.parentNode.appendChild(container);
 
