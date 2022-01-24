@@ -37,5 +37,5 @@ new ScrollMagic.Scene({
 })
   .setClassToggle(".book-button", "reveal")
   .reverse(false)
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
