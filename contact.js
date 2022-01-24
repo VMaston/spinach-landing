@@ -11,7 +11,7 @@ search.addEventListener("keyup", () => {
 async function autocomplete() {
   if (search.value.length > 2) {
     closeAllLists();
-    var arr = await mySubmit();
+    var arr = await getCompany();
     var container, listItems, i;
     container = document.createElement("DIV");
     container.setAttribute("class", "autocomplete-items");
@@ -46,7 +46,7 @@ search.addEventListener("click", () => {
   autocomplete();
 });
 
-async function mySubmit() {
+async function getCompany() {
   let companyResult;
 
   var companyName = document.getElementById("cname").value;
@@ -55,4 +55,18 @@ async function mySubmit() {
     .then((data) => (companyResult = data.items));
 
   return companyResult;
+}
+
+async function mySubmit() {
+  var email = document.getElementById("email").value;
+  var companyName = document.getElementById("cname").value;
+  var companyDetails = await getCompany();
+
+  let jsonReturn = {
+    email: email,
+    companyName: companyName,
+    company: companyDetails,
+  };
+
+  return jsonReturn;
 }
