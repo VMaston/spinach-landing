@@ -14,13 +14,15 @@
 
     <div class="first">
         <div class="introducing">Expand your business operations <span style="font-weight: bold;">online</span>
-            <span class="dot" style="margin-left: 15px;"></span>
+            <span class="dot" style="margin-left: 0.1em;"></span>
         </div>
     </div>
 
     <div id="book" class="contact-container">
-        <form id="contact" class="contact" onsubmit="mySubmit(); return false;">
+        <form id="contact" class="contact" onsubmit="mySubmit();">
+
             <span class="book">Book a consultation with us:</span>
+
             <div class="label-input"><label for="email">Contact Email:</label>
                 <input type="email" id="email" name="email" style="width: 80%;" required>
             </div>
@@ -28,46 +30,55 @@
                 <input autocomplete="off" type="text" id="cname" name="company" style="width: 90%" required>
             </div>
             <input class="submit-button" type="submit" value="Submit">
+
         </form>
     </div>
+
     <div class="main">
 
-        <div id="trigger1" class="about-block about-block1">
-            <div class="about-text-container">
-                <span><span class="dot"></span>Who are we</span>
+        <div class="about-block right-to-left">
+            <div class="about-text-container container-right">
+                <div>Who are we<span class="dot"></span></div>
+
                 <div class="about-undertext">We're a vibrant team of expert analysts,
                     strategists, marketeers, and techies that
                     know their stuff and are passionate about
                     revolutionising traditional businesses.</div>
-                <img class="about-underimg" src="img/undraw/undraw_team_collaboration_re_ow29.svg" />
+
+                <img class="about-graphic" src="img/undraw/undraw_team_collaboration_re_ow29.svg" />
             </div>
-            <img class="about-img" src="img/task-allocating.jpg" />
+            <div class="image-container"><img class="about-img" src="img/task-allocating.jpg" /></div>
         </div>
 
-        <div id="trigger2" class="about-block middle about-block2">
-            <div class="about-text-container container-middle">
-                <span>What we do<span class="dot" style="margin-right: 0; margin-left: 15px;"></span></span>
+        <div class="about-block top-to-bottom">
+            <div class="about-text-container container-center">
+                <div>What we do<span class="dot"></span></div>
+
                 <div class="about-undertext">From business strategy to automation
                     and marketing to customer experience,
                     we can help your business grow.</div>
-                <img class="about-underimg middle" src="img/undraw/undraw_world_re_768g.svg" />
+
+                <img class="about-graphic" src="img/undraw/undraw_world_re_768g.svg" />
             </div>
         </div>
 
-        <div id="trigger3" class="about-block left about-block3">
-            <img class="about-img" src="img/note-taking.jpg" />
+        <div class="about-block left-to-right">
+            <div class="image-container"><img class="about-img" src="img/note-taking.jpg" /></div>
             <div class="about-text-container container-left">
-                <span>How we do<span class="dot" style="margin-right: 0; margin-left: 15px;"></span></span>
+                <div>How we do<span class="dot"></span></div>
+
                 <div class="about-undertext">We listen to your problems and create
                     actionable solutions. Our team will develop a key infrasture plan to help your company
                     expand its online presence
                     and fulfill its software requirements.</div>
-                <img class="about-underimg" src="img/undraw/undraw_accept_tasks_re_09mv.svg" />
+
+                <img class="about-graphic" src="img/undraw/undraw_accept_tasks_re_09mv.svg" />
             </div>
         </div>
-        <a href="#book" style="text-decoration: none;"><button id="book-button" class="book-button">
-                <div>Interested? ▲
-            </button></a>
+
+        <a href="#book" style="text-decoration: none;">
+            <button id="book-button" class="book-button">Book a Consultation Today ▲</button>
+        </a>
     </div>
 
     <footer>
