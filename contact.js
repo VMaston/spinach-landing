@@ -1,34 +1,32 @@
-function autocomplete() {
-  var search = document.getElementById("cname");
+var search = document.getElementById("cname");
+var timer = 0;
 
-  var timer;
-  var timelimit = 500;
+search.addEventListener("keyup", function () {
+  clearTimeout(timer);
+  timer = setTimeout(function () {
+    autocomplete();
+  }, 400);
+});
 
-  search.addEventListener("input", function () {
-    clearTimeout(timer);
-    timer = setTimeout(find, timelimit);
+async function autocomplete() {
+  if (search.value.length > 2) {
+    var arr = await mySubmit();
+    var container, listItems, i;
+    container = document.createElement("DIV");
+    container.setAttribute("id", this.id + "autocomplete-list");
+    container.setAttribute("class", "autocomplete-items");
+    this.parentNode.appendChild(container);
 
-    async function find() {
-      if (search.value.length > 2) {
-        var arr = await mySubmit();
-        var container, listItems, i;
-        container = document.createElement("DIV");
-        container.setAttribute("id", this.id + "autocomplete-list");
-        container.setAttribute("class", "autocomplete-items");
-        this.parentNode.appendChild(container);
-
-        for (i = 0; i < arr.length; i++) {
-          listItems = document.createElement("DIV");
-          listItems.innerHTML = arr[i].title;
-          listItems.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          listItems.addEventListener("click", function () {
-            search.value = this.getElementsByTagName("input")[0].value;
-          });
-          container.appendChild(listItems);
-        }
-      }
+    for (i = 0; i < arr.length; i++) {
+      listItems = document.createElement("DIV");
+      listItems.innerHTML = arr[i].title;
+      listItems.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+      listItems.addEventListener("click", function () {
+        search.value = this.getElementsByTagName("input")[0].value;
+      });
+      container.appendChild(listItems);
     }
-  });
+  }
 }
 
 async function mySubmit() {
