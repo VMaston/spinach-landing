@@ -29,3 +29,13 @@ new ScrollMagic.Scene({
   .setClassToggle(".logo", "dark")
   //.addIndicators()
   .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: "footer",
+  triggerHook: 0.8,
+  offset: -100,
+})
+  .setClassToggle(".book-button", "reveal")
+  .reverse(false)
+  //.addIndicators()
+  .addTo(controller);
