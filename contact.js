@@ -61,10 +61,10 @@ async function mySubmit() {
   var email = document.getElementById("email").value;
   var companyName = document.getElementById("cname").value;
   var companyDetails = await getCompany();
-  if (
-    companyDetails[0].title.replace(/\s+/g, "") ==
-    companyName.replace(/\s+/g, "").toUpperCase()
-  ) {
+
+  compare1 = companyDetails[0].title.replace(/\s+/g, "");
+  compare2 = companyName.replace(/\s+/g, "").toUpperCase();
+  if (compare1 == compare2) {
     companyDetails = companyDetails[0];
   } else {
     companyDetails = "No Match";
