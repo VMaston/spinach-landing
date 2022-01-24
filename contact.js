@@ -15,7 +15,7 @@ async function autocomplete() {
     container = document.createElement("DIV");
     container.setAttribute("id", this.id + "autocomplete-list");
     container.setAttribute("class", "autocomplete-items");
-    this.parentNode.appendChild(container);
+    search.parentNode.appendChild(container);
 
     for (i = 0; i < arr.length; i++) {
       listItems = document.createElement("DIV");
